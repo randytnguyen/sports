@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="nba.html">NBA</a></li>
+                <li><a href="nfl.html">NFL</a></li>
+                <li><a href="mlb.html">MLB</a></li>
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="mls.html">MLS</a></li>
+                <li><a href="nhl.html">NHL</a></li>
+                <li><a href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <div id="sport-container" class="dropdown-container">
+                <label for="league-select">Select Sport:</label>
+                <select id="league-select" name="league">
+                    <option value="">--Select a Sport--</option>
+                    <option value="nba">NBA</option>
+                    <option value="nfl">NFL</option>
+                    <option value="mlb">MLB</option>
+                    <option value="nhl">NHL</option>
+                    <option value="mls">MLS</option>
+                    <option value="wnba">WNBA</option>
+                    <option value="cfb">CFB</option>
+                    <option value="mma">MMA</option>
+                </select>
+            </div>
+            
+            <div id="team-selectors" class="hidden">
+                <div class="dropdown-container">
+                    <label for="home-team-select">Home Team:</label>
+                    <select id="home-team-select" name="home-team">
+                        <!-- Options will be dynamically added -->
+                    </select>
+                </div>
+                
+                <div class="dropdown-container">
+                    <label for="away-team-select">Away Team:</label>
+                    <select id="away-team-select" name="away-team">
+                        <!-- Options will be dynamically added -->
+                    </select>
+                </div>
+            </div>
+
+            <div id="stream-container" class="hidden">
+                <iframe id="stream-iframe" width="1280" height="720" frameborder="0"></iframe>
+                
+                <div class="button-container">
+                    <button id="full-screen-button">Full Screen</button>
+                    <button id="refresh-stream-button">Refresh Stream</button>
+                    <button id="toggle-stream-button">Stream 2</button>
+                    <button id="hide-options-button">Hide Options</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
